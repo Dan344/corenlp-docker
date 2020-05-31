@@ -22,6 +22,7 @@ $ docker run -d -p 9000:9000 corenlp:3.9.2
 -> `localhost:9000`
 
 # Deploy(EC2: Amazon Linux 2)
+- カスタムTCP `9000` を許可
 
 ```
 $ sudo yum update -y
@@ -40,8 +41,8 @@ $ ssh <aws>
 ```
 
 ```
-git clone https://github.com/Dan344/corenlp-docker.git
-cd corenlp-docker
-docker build -t corenlp:4.0.0 .
-docker run -d -p 9000:9000 corenlp:4.0.0
+$ git clone https://github.com/Dan344/corenlp-docker.git
+$ cd corenlp-docker
+$ docker build -t corenlp:4.0.0 .
+$ docker run -d -p 9000:9000 corenlp:4.0.0
 ```
